@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int option;
+do{
+printf("\n1.solve linear equation");
+printf("\n2.calculate factorial");
+printf("\n3.solve quadratic equation");
+printf("\n4.exit");
+printf("\nenter your operation:");
+scanf("%d",&option);
+switch(option)
+{
+case 1:
+{
+float a,b,x;
+printf("enter the value of a:");
+scanf("%f",&a);
+printf("enter the value of b:");
+scanf("%f",&b);
+if(a!=0){
+x=-b/a;
+printf("X:%f",x);
+}
+if(a==0 && b==0){
+printf("\nintinitely many solutions\n");
+}
+if(a==0 && b!=0){
+printf("\nno solutions\n");
+}
+break;
+}
+case 2:
+{
+int fact,i;
+int total=1;
+printf("enter the value between 0 and 12:\n");
+scanf("%d",&fact);
+if(fact>12||fact<0)
+{
+printf("!!!!!please enter the value between 0 and 12 !!!!\n");
+}
+else{
+for(i=1;i<=fact;i++)
+{
+total=total*i;
+}
+printf("\nfactorial of %d is %d\n",fact,total);
+}
+break;
+}
+case 3:
+{
+float
+a,b,c,d,root1,root2;
+printf("\nenter the values of a:");
+scanf("%f",&a);
+printf("\nenter the values of b:");
+scanf("%f",&b);
+printf("\nenter the values of c:");
+scanf("%f",&c);
+if(a==0)
+{
+printf("\nthis is not a quadratic equation\n");
+}
+else{
+d=b*b-4*a*c;
+if (d>0)
+{
+root1=(-b+sqrt(d))/(2*a);
+root2=(-b-sqrt(d))/(2*a);
+printf("\ntwo distinct real roots");
+printf("\nroot1=%f",root1);
+printf("\nroot2=%f",root2);
+}
+else if (d==0)
+{
+root1=-b/(2*a);
+printf("\ntwo equal real roots");
+printf("\nRoot=%f",root1);
+}
+else
+{
+printf("\nno real roots");
+}
+}
+break;
+}
+case 4:
+printf("\nexisting.....");
+default:
+printf("\ninvaild option");
+break;
+}
+}while(option!=4);
+return 0;
+}
