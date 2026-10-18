@@ -1,0 +1,39 @@
+# Pseudocode for Menu-Driven Math Operations
+
+Step 1: Start the program.
+
+Step 2: Display the menu with four options:
+1. Solve a linear equation
+2. Calculate factorial
+3. Solve a quadratic equation
+4. Exit
+
+Step 3: Ask the user to enter their choice.
+
+Step 4: If the user selects option 1:
+- Ask the user to enter the values of a and b.
+- If a is not zero, calculate x = -b/a and display the result.
+- If both a and b are zero, display that there are infinitely many solutions.
+- Otherwise, display that there is no solution.
+
+Step 5: If the user selects option 2:
+- Ask the user to enter a number between 0 and 12.
+- If the number is outside this range, display an error message.
+- Otherwise, set the total to 1 and multiply it by each number from 1 to the entered number.
+- Display the factorial result.
+
+Step 6: If the user selects option 3:
+- Ask the user to enter the values of a, b, and c.
+- If a is zero, display that it is not a quadratic equation.
+- Otherwise, calculate the discriminant using D = b2 - 4ac.
+- If D is greater than zero, calculate and display two distinct real roots.
+- If D is equal to zero, calculate and display the repeated root.
+- If D is less than zero, display that there are no real roots.
+
+Step 7: If the user selects option 4, display the exit message and stop the program.
+
+Step 8: If the user enters any other option, display an invalid option message.
+
+Step 9: Repeat the menu until the user chooses option 4.
+
+Step 10: End the program.
